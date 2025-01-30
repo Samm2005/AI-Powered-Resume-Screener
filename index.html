@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Screener</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="firebase_config.js"></script>
+</head>
+<body>
+    <h1>AI Resume Screener</h1>
+
+    <label>Upload Resume:</label>
+    <input type="file" id="resumeInput" accept=".pdf, .docx">
+
+    <label>Enter Job Description:</label>
+    <textarea id="jobDescription" placeholder="Paste job description here..."></textarea>
+
+    <button onclick="uploadResume()">Analyze Resume</button>
+
+    <h2>Ranked Candidates</h2>
+    <ul id="rankedList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
